@@ -18,6 +18,10 @@
 .textcontent{
     font-size: x-large;
 }
+
+.inputheader{
+    margin-bottom: 1rem;
+}
 @mixin inputs {
     width: 50%;
     height: 4rem;
