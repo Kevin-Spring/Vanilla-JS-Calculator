@@ -1,0 +1,33 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+}
+@mixin grid-item{
+    margin: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    border-radius: 1.5rem;
+} 
+.grid__item-inkomst{
+    @include grid-item;
+    background: $griditem1;
+}
+.grid__item-kostnader{
+    @include grid-item;
+    background: $griditem2;
+}
+.grid__item-total{
+    @include grid-item;
+    font-weight: $boldfont;
+    background: $griditem3;
+    height: 40vh;
+}
+
+.grid__item-inputfields{
+    @include grid-item;
+    background: $griditem4;
+    height: 40vh;
+}

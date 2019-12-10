@@ -1,0 +1,22 @@
+.bounce {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: -webkit-radial-gradient(25px 25px, circle, $griditem3, $griditem1);
+    animation: spin 1000ms linear infinite, bounce 3s alternate-reverse infinite;
+    transition: all 1s ease;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    z-index: -2;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes bounce {
+    0% { transform: translate3d(0, 0, 0);}
+    100% { transform: translate3d(1500%, 0, 0);}
+  }

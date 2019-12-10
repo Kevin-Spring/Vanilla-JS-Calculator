@@ -1,36 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- Stylesheet Link for FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- Stylesheet created by Gulp -->
+    <link rel="stylesheet" href="public/css/styles.css">
+    <!-- Javascript -->
     <script src="app.js" defer></script>
 </head>
+
 <body>
+    <!-- Circle animation -->
+    <div class="bounce"></div>
+    <!-- Start of Header -->
+    <header class="headercontainer">
+        <div class="header">KALKYLATOR </div>
+    </header>
+    <!-- End of Header -->
 
-    <h2 class="inkomst">Beräkning av inkomster:</h2>
-    <div class="inkomstdiv"></div>
-    <h2 class="kostnader">Beräkning av kostnader:</h2>
-    <div class="kostnaddiv"></div>
-    
-    <h1 class="totalbelopp">Slutgiltigt totalbelopp:</h1>
-    <div class="totalbeloppdiv"></div>
+    <!-- The container for all of the grid css -->
+    <div class="grid-container">
 
-    <h2 class="inkomst-lista">Lista över alla inkomster:</h2>
-    <div class="inkomst-lista-div"></div>
-    <h2 class="kostnads-lista">Lista över alla kostnader:</h2>
-    <div class="kostnads-lista-div"></div>
+        <!-- Start of the income section -->
+        <section>
+            <div class="grid__item-inkomst">
+                <h2 class="inkomst lightheader">Beräkning av inkomster:</h2>
+                <div class="inkomstdiv textcontent"></div>
+                <br>
+                <h2 class="inkomst-lista lightheader">Lista över alla inkomster:</h2>
+                <div class="inkomst-lista-div textcontent"></div>
+            </div>
+        </section>
+        <!-- End of the income section -->
 
+        <!-- Start of the expenses section -->
+        <section>
+            <div class="grid__item-kostnader">
+                <h2 class="kostnader lightheader">Beräkning av kostnader:</h2>
+                <div class="kostnaddiv textcontent"></div>
+                <br>
+                <h2 class="kostnads-lista lightheader">Lista över alla kostnader:</h2>
+                <div class="kostnads-lista-div textcontent"></div>
+            </div>
+        </section>
+        <!-- End of the expenses section -->
 
-    <select id="selector">
-        <option class="plus">+</option>
-        <option class="minus">-</option>
-    </select>
+        <!-- Start of the total section -->
+        <section>
+            <div class="grid__item-total">
+                <h1 class="totalbelopp heavyheader">Slutgiltigt totalbelopp:</h1>
+                <br>
+                <div class="totalbeloppdiv hej hopp"></div>
+            </div>
+        </section>
+        <!-- End of the total section -->
 
-    <input type="text" name="" id="input-text" placeholder="Add Description"> 
-    <input type="number" name="" id="input-number" placeholder="Add Value">
-    <button class="btn">Add</button>
-    
+        <!-- Start of the input section -->
+        <section>
+            <div class="grid__item-inputfields">
+                <div class="selectorcontainer">
+                    <i class="fas fa-ellipsis-v figure"></i>
+                    <select id="selector">
+                        <option class="plus">+</option>
+                        <option class="minus">-</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <div class="inputtextdiv">
+                    <label><i class="fas fa-pencil-alt figure"></i></label>
+                    <input type="text" name="" id="input-text" placeholder="Add Description">
+                </div>
+                <br>
+                <div class="inputvaluediv">
+                    <label><i class="fas fa-coins figure"></i></label>
+                    <input type="number" name="" id="input-number" placeholder="Add Value">
+                </div>
+                <div class="btn"><i class="far fa-plus-square"></i></div>
+            </div>
+        </section>
+        <!-- End of the input section -->
+    </div>
+    <!-- End of the grid container -->
+
 </body>
+
 </html>

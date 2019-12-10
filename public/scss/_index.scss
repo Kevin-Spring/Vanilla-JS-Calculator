@@ -1,0 +1,60 @@
+.headercontainer{
+    margin: 2rem;
+    border-radius: 10rem;
+}
+.header {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: $boldfont;
+    color: $header;
+}
+
+.lightheader {
+    font-weight: $mediumfont;
+}
+.totalbeloppdiv{
+    font-size: xx-large;
+}
+.textcontent{
+    font-size: x-large;
+}
+@mixin inputs {
+    width: 50%;
+    height: 4rem;
+    font-size: x-large;
+    padding-left: 2rem;
+    border: 1px solid #ccc;
+    transition: .5s;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+#input-text,
+#input-number,
+#selector{
+    @include inputs;
+}
+
+.figure {
+    font-size: x-large;
+}
+
+.selectorcontainer{
+    padding-left: .6rem;
+}
+
+#input-text:focus,
+#input-number:focus,
+#selector:focus {
+    border: 1px solid #555;
+  }
+  
+.btn{
+    padding-top: 1rem;
+    text-align: 25%;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.btn:active{
+    color: rgba(0, 0, 0, 0.582);
+}

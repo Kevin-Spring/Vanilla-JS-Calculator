@@ -26,6 +26,11 @@ function add (e){
 
     /* Visar summan totalbelopp */
     const totalbeloppdiv = document.querySelector(".totalbeloppdiv");
+
+    /* ------------Selector for animation------------ */
+    const studsdiv = document.querySelector(".hopp");
+
+
     
 
     if (x == 0) {
@@ -35,6 +40,13 @@ function add (e){
         li.textContent= text + " " + "+" + value  + "kr";
         /* Gäller inkomsttotals div */
         inkomstDiv.innerHTML = (Number(inkomstDivValue)) + (Number(value));
+        
+        /* Animation */
+        studsdiv.setAttribute("id", "animation-green")
+        setTimeout(function(){
+            document.querySelector("#animation-green").removeAttribute("id");
+        }, 300);
+
     }
 
     else if (x == 1){
@@ -44,10 +56,16 @@ function add (e){
         li.textContent = text + " " + kostnadNegativ + "kr";
         /* Gäller kostnadstotal div */
         kostnadDiv.innerHTML = (Number(kostnadDivValue)) + kostnadNegativ;
+
+        /* Animation */
+        studsdiv.setAttribute("id", "animation-red");
+        setTimeout(function(){
+        document.querySelector("#animation-red").removeAttribute("id");
+        }, 300);
     }
 
 
-    return totalbeloppdiv.innerHTML = (Number(inkomstDiv.innerHTML)) + (Number(kostnadDiv.innerHTML));
+    return totalbeloppdiv.innerHTML = (Number(inkomstDiv.innerHTML)) + (Number(kostnadDiv.innerHTML)) + " kr";
 
 
 }
